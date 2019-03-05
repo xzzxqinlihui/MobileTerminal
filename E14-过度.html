@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过度</title>
+    <style>
+    .box {
+        /* 设置过度的效果 */
+        transition-property: width;    /* all代表对所有的可以过度的属性应选用过度效果 */
+        /* 过渡时间 */
+        transition-duration:1s;
+        /* 过渡delay */
+        transition-delay: 0.5s;
+        /* 动画  效果 */
+        /* transition-timing-function: ease-in-out; */
+        transition-timing-function: steps(3,end);
+        
+        width: 200px;
+        height: 200px;
+        border:1px solid red;
+        background-color:yellow;
+    }
+    .box:hover {
+        width: 400px;
+    }
+    
+    .box2 {
+        width: 200px;
+        height: 200px;
+        border:1px solid red;
+        background-color:green;
+        /* 合写 */
+        /* 可过渡的属性  过渡的持续时间  动画函数  delay延迟执行的时间 */
+        transition: all 1s ease 0.5s;
+    }
+    .box2:hover {
+        width: 300px;
+        height: 50px;
+        opacity: 0.5;
+        background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <input type="button" value="按钮" id="btn">
+    <script>
+    (function(){
+        window.onload = function(){
+            document.querySelector("#btn").addEventListener("click",function(){
+                document.querySelector(".box2").style.width = "600px";
+            });
+        };
+    })();
+    </script>
+</body>
+</html>

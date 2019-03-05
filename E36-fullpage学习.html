@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fullpage</title>
+    <link rel="stylesheet" href="./lib/fullPage.js-master/dist/fullpage.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
+    <script src="./lib/fullPage.js-master/dist/fullpage.js"></script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section"><h3>第一层</h3></div>
+        <div class="section"><h3>第二层</h3></div>
+        <div class="section">
+            <h3>第三层</h3>
+            <div class="slide">第三层的第1部分</div>
+            <div class="slide">第三层的第2部分</div>
+            <div class="slide">第三层的第3部分</div>
+            <div class="slide">第三层的第4部分</div>
+        </div>
+        <div class="section"><h3>第四层</h3></div>
+    </div>
+
+    <script>
+    (function(){
+        $(function(){
+            $("#fullpage").fullpage({
+                sectionsColor:[ "red","blue","green","pink" ],
+                navigation:true,
+                navigationTooltips:[ "1","2","3","4" ],
+                navigationPosition:"right",
+
+                loopBottom:true,
+                loopTop:true,
+                //  当前屏幕加载完成后执行的垱店方法
+                afterLoad:function( anchorLink,index ){
+                    console.log( anchorLink ,index );
+                },
+                //  当前屏幕离开之前，先执行leave事件，然后再进行离屏动画
+                onLeave: function( index, nextIndex,direction ){
+                    console.log( index,nextIndex,direction );
+                },
+            });
+        });
+    })();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字飞入案例</title>
+    <style>
+        html,body,div {
+        margin: 0;
+        padding: 0;
+    }
+    .box {
+        font:40px/1.5 'Microsoft YaHei',serif;
+        color:rgba(0,0,255,.8);
+        font-weight: bolder;
+        text-shadow: 4px 4px 5px rgba(0,0,255,0.3);
+        text-align: center;
+        transition: all 1s ease;
+        transform:translate(-1000px) rotate(280deg) scale(3,3);
+    }
+    .left-fade-in {
+        transform: none;
+        opacity: 0.9;
+    }
+    </style>
+    <script src="./lib/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <input type="button" value="飞入" id="btnFlyIn">
+    <input type="button" value="飞出" id="btnFlyOut">
+    <div class="box">
+        我是飞入文字
+    </div>
+    <script>
+        // $(function () {
+
+        //     $("#btnFlyIn").on("click", function (e) {
+        //         $(".box").addClass("left-fade-in");
+        //     });
+        //     $("#btnFlyOut").on("click", function (e) {
+        //         $(".box").removeClass("left-fade-in");
+        //     });
+
+        // });
+
+
+
+        //一般方法
+        window.onload = function(){
+            var box = document.querySelector(".box");
+            document.querySelector("#btnFlyIn").addEventListener("click",function(e){
+                box.className += " left-fade-in";
+            });
+            document.querySelector("#btnFlyOut").addEventListener("click",function(e){
+                box.className = box.className.replace(" left-fade-in",""); 
+            });
+        };
+    </script>
+</body>
+
+</html>

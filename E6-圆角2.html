@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆角2</title>
+   <style>
+    html,body,div,ul,li {
+        margin: 0;
+        padding: 0;   
+    }
+    ul,li {
+        list-style: none;
+    }
+    li {
+        width: 100px;
+        height: 100px;
+        border:1px solid #ccc;
+        float: left;
+        margin: 10px;
+    }
+    li:first-child {
+        border-bottom-right-radius: 10px;
+        /* 第一个参数是水平半径，第二个参数垂直半径 */
+        border-bottom-left-radius: 10px 40px;
+        border-top-right-radius: 20px;
+
+        /* 斜线前面设置水平半径，斜线后面设置  垂直半径 */
+        border-radius: 10px 20px / 40px 30px 20px 10px;
+        border-radius: 10px 20px 30px / 40px 30px 20px 10px;
+        border-radius: 10px 20px 30px 40px/ 40px 30px 20px 10px;
+    }
+    li:nth-child(2) {
+        width: 100px;
+        height: 40px;
+        background-color: pink;
+        border:2px solid yellow;
+        border-radius: 20px;
+        text-align: center;
+        color:#fff;
+        line-height: 40px;
+    }
+    li:nth-child(3) {
+        border:20px solid lightblue;
+        width: 300px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 100px 25px 50px 50px / 50px 20px 50px 20px;
+    }
+    li:nth-child(4) {
+        position: relative;
+    }
+    li:nth-child(4):after {
+        content: "";
+        display: block;
+        position: absolute;
+        top:99px;
+        left:-1px;
+        width: 100px;
+        height: 40px;
+        border:1px solid #ccc;
+        border-radius: 0 0 40px 40px;
+        border-top:none;
+        background-color: #fff;
+    }
+   </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

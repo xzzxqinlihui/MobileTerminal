@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纸牌旋转</title>
+    <style>
+        html.body,div,li,ul {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .list {
+            position: relative;
+        }
+        .list li {
+            position: absolute;
+            width: 150px;
+            height: 250px;
+            left: 600px;
+            top: 300px;
+            transition: all 0.5s ease;
+        }
+        .list li img{
+            height: 80%;
+            width: 80%;
+        }
+        .list:hover .list-item:nth-child(2){
+            transform: rotate(30deg);
+            transform-origin: 50% 50%;
+        }
+        .list:hover .list-item:nth-child(3){
+            transform: rotate(90deg);
+            transform-origin: 50% 50%;
+        }
+        .list:hover .list-item:nth-child(4){
+            transform: rotate(150deg);
+            transform-origin: 50% 50%;
+        }
+        .list:hover .list-item:nth-child(5){
+            transform: rotate(210deg);
+            transform-origin: 50% 50%;
+        }
+        .list:hover .list-item:nth-child(6){
+            transform: rotate(270deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li class="list-item"><img src="./img/j.jpg" alt=""></li>
+        <li class="list-item"><img src="./img/j.jpg" alt=""></li>
+        <li class="list-item"><img src="./img/j.jpg" alt=""></li>
+        <li class="list-item"><img src="./img/j.jpg" alt=""></li>
+        <li class="list-item"><img src="./img/j.jpg" alt=""></li>
+        <li class="list-item"><img src="./img/j.jpg" alt=""></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素选择器</title>
+    <style>
+        /* 段落中的第一个字符 */
+        p::first-letter {
+            font-size: 40px;
+        }
+        /* 第一行 */
+        p::first-line {
+            color:pink;
+        }
+        /* 伪类兼容老的浏览器，可以使用: */
+        p:before {
+            content: "添加的一个内容";
+            display: block;
+            border: 1px solid red;
+            height: 30px;
+        }
+        /* 设置选中文本的样式 */
+        p::selection {
+            background-color: red;
+            color:yellow;
+        }
+        p:target {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#txt1">段落1</a>
+    <a href="#txt2">段落2</a>
+    <a href="#txt3">段落3</a>
+    <a href="#txt4">段落4</a>
+    <p id="txt1">
+        第一行内容 <br>
+        第二行内容 <br>
+        第三行内容 <br>
+    </p>
+    <p id="txt2">
+        第一行内容 <br>
+        第二行内容 <br>
+        第三行内容 <br>
+    </p>
+    <p id="txt3">
+        第一行内容 <br>
+        第二行内容 <br>
+        第三行内容 <br>
+    </p>
+    <p id="txt4">
+        第一行内容 <br>
+        第二行内容 <br>
+        第三行内容 <br>
+    </p>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.box2 {
+    -webkit-animation: transform 1s ease;
+            animation: transform 1s ease;
+    display: flex;
+}

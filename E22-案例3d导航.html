@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3d导航</title>
+    <style>
+    html,body,div,ul {
+        margin: 0;
+        padding: 0;
+    }
+    ul,ol {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .nav .nav-item{
+        float: left;
+        width: 150px;
+        height: 30px;
+        /* border:1px solid red; */
+        
+        text-align: center;
+        line-height: 30px;
+        position: relative;
+
+        /* 设置3d效果  设置一下两个属性*/
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease;
+    }
+    .nav .nav-item:hover {
+        transform: rotateX(-90deg);
+    }
+    .nav .nav-item a , .nav .nav-item .des {
+        width: 150px;
+        height: 30px;
+        opacity: 0.7;
+        color:#fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .nav .nav-item a{
+        display: block;
+        background-color: red;
+        transform: 15px;
+    }
+    .nav .nav-item .des {
+        background-color: blue;
+        transform: rotateX(90deg) translateZ(15px);
+    }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="javascript:">item1</a>
+            <div class="des">item==1</div>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:">item2</a>
+            <div class="des">item==2</div>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:">item3</a>
+            <div class="des">item==3</div>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:">item4</a>
+            <div class="des">item==4</div>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:">item5</a>
+            <div class="des">item==5</div>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:">item6</a>
+            <div class="des">item==6</div>
+        </li>
+    </ul>
+</body>
+</html>

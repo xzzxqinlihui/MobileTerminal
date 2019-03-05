@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆角边框</title>
+    <style>
+    html,body,div {
+        height: 0;
+        margin: 0;
+    }
+    .box {
+        margin: 100px auto;
+        width: 200px;
+        height: 200px;
+        border:1px solid red;
+        /* 代表四个角都是4像素的半径 */
+        /* border-radius: 4px;  */
+        /* 左上 右上 右下 坐下 */
+        /* border-radius: 10px 20px 30px 40px; */
+        /* 第一个参数代表的左上和右下  第二个参数代表右上和左下 */
+        /* border-radius: 10px 30px; */
+        /* 左上   右上和左下    右下 */
+        border-radius: 10px 20px 30px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        border:10px solid red;
+        border-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <img src="./img/a.jpg" alt="">
+</body>
+</html>

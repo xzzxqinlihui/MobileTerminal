@@ -1,0 +1,36 @@
+.box {
+  width: 18px;
+  background-color: red;
+  border-bottom: 1px solid red;
+  -webkit-animation: motion 3s infinite;
+          animation: motion 3s infinite;
+}
+
+@-webkit-keyframes motion {}
+
+@keyframes motion {}.h {
+  font-size: 20px;
+  height: 14px;
+  background-color: red;
+}
+
+.h .m {
+  width: 10px;
+}
+
+.h .m .n {
+  height: 20px;
+}
+
+.h .m .n:hover {
+  background-color: #fff;
+}
+
+.h:hover {
+  background-color: red;
+}
+
+.box12 {
+  font-size: 18px;
+}
+/*# sourceMappingURL=main.css.map */

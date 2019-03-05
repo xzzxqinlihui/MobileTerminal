@@ -1,0 +1,4 @@
+.box2 {
+    animation: transform 1s ease;
+    display: flex;
+}

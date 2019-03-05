@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旋转显示案例</title>
+    <style>
+    html,body,div,pre {
+        margin: 0;
+        padding: 0;
+    }
+    .box-wrap {
+        width: 450px;
+        height: 300px;
+        margin: 100px auto;
+        position: relative;
+
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    .box-wrap .front,.box-wrap .back {
+        border:1px solid #ccc;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.8;
+
+        transition: transform 1s ease;
+        backface-visibility: hidden;
+    }
+    .box-wrap .front {
+        text-align: center;
+        background-color:pink;
+        
+    }
+    .box-wrap .front img{
+        width: 200px;
+        height: 200px;
+        border:1px solid #ccc;
+        border-radius: 50%;
+    }
+    .box-wrap .back {
+        background-color: orchid;
+        transform: rotateY(-180deg)
+    }
+    .box-wrap:hover .front{
+        transform: rotateY(180deg);
+    }
+    .box-wrap:hover .back {
+        transform: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="front">
+            <img src="./img/a.jpg" alt="">
+            <h3>明星档案</h3>
+        </div>
+        <div class="back">
+            <h3>明星介绍</h3>
+            <pre>
+                姓名
+                年龄
+                职业
+                其他
+            </pre>
+            <!-- <img src="./img/a.jpg" alt=""> -->
+        </div>
+    </div>
+</body>
+</html>

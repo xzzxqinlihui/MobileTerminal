@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>翻转盒子</title>
+    <style>
+    html,body,div {
+        margin: 0;
+        padding: 0;
+    }
+    .box {
+        width: 202px;
+        height: 450px;
+        position: relative;
+        margin:100px auto;
+        /* 设置为3d效果 */
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+    .box div{
+        width: 200px;
+        height: 200px;
+        border:1px solid red;
+
+        position: absolute;
+        left: 0;
+        top:0;
+        opacity: 0.7;
+    }
+    .top {
+        background-color: blue;
+        z-index: 10;
+        transition: transform 1s ease;
+        /* 第一个参数：设置水平的旋转参考点 */
+        /* 第二个参数：设置垂直的旋转参考点 */
+        /* 第三个参数：设置z的旋转参考点 */
+        transform-origin: 50% bottom 0;
+    }
+    .bottom {
+        background-color: maroon;
+        z-index: 9;
+    }
+    .box:hover .top {
+        transform: rotateX(-180deg);
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">top</div>
+        <div class="bottom">bottom</div>
+    </div>
+</body>
+</html>

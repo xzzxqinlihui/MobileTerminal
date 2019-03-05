@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>径向渐变</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            border:1px solid red;
+            /* 像线性渐变一样，色标之间是等间距的 */
+            background: radial-gradient(red, yellow, rgb(30, 144, 255));
+
+            /* 椭圆使用最近端的值, 这就意味着从开始点(中心点)到封闭盒子的最近端的距离来指定椭圆的尺寸。 */
+            background: radial-gradient(ellipse closest-side, red, yellow 10%, #1E90FF 50%, white);
+
+            /* 渐变的尺寸为起始点到封闭盒模型最远端的起始点的距离。 */
+            background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1E90FF 50%, white);
+
+            /* 指定开始点(中心)和最近端的距离为圆的尺寸。 */
+            background: radial-gradient(circle closest-side, red, yellow 10%, #1E90FF 50%, white);
+
+            /*100px的渐变半径 圆心点坐标 50px  50px*/
+            /* background: radial-gradient(100px at 50px 50px, rgba(0, 0, 255, 1), rgba(0, 0, 255, .5)); */
+
+            /* 作者：IT老马 链接：https: //www.jianshu.com/p/3988dc9b5920
+                來源：简书 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

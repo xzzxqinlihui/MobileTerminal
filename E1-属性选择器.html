@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+    <style>
+        /* 属性选择器 */
+        /* 包含该属性 */
+        [id] {
+            color: yellow;
+        }
+        [temp] {
+            color: red;
+        }
+        /* 属性值含有 */
+        [href*="java"] {
+            color:pink;
+        }   
+        /* 属性值以什么开头 */
+        [href^="java"] {
+           background-color:purple;
+        }   
+        /* 属性值以什么结尾 */
+        [temp$="ds"] {
+            background-color:pink;
+        }   
+
+
+        /* 伪类选择器 */
+        a:first-child {
+            font-size: 40px;
+        }
+        a:last-child {
+            font-size: 60px;
+        }
+        a:nth-child(2) {
+            font-size: 50px;
+        }
+        a:nth-child(3) {
+            display: inline;
+            border:1px solid #ccc;
+            font-size:30px;
+        }
+        a:nth-child( 3n ) {
+            border:20px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" temp="mds">你好1</a>
+    <a href="#" temp="mds99">你好2</a>
+    <a href="javascript:0">你好3</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+    <a href="#" id="id1">你好4</a>
+
+</body>
+</html>
